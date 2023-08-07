@@ -1,0 +1,33 @@
+nav {
+  padding: 2rem 10rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 4fr 1fr 1fr;
+  list-style: none;
+}
+.nav--link {
+  text-align: center;
+}
+
+.nav--link > a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav--link a:hover {
+  color: #c56f00;
+}
+
+.name {
+  color: white;
+  text-align: center;
+  font-size: large;
+}

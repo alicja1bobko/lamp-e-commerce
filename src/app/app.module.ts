@@ -17,6 +17,7 @@ import { BestDesignerComponent } from './home/best-designer/best-designer.compon
 import { ItemDescComponent } from './home/item-desc/item-desc.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ItemDescHorizontalComponent } from './home/item-desc-horizontal/item-desc-horizontal.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { ItemDescHorizontalComponent } from './home/item-desc-horizontal/item-de
     BestDesignerComponent,
     ItemDescComponent,
     ItemDescHorizontalComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

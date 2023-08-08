@@ -18,6 +18,7 @@ import { ItemDescComponent } from './home/item-desc/item-desc.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ItemDescHorizontalComponent } from './home/item-desc-horizontal/item-desc-horizontal.component';
 import { FooterComponent } from './footer/footer.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FooterComponent } from './footer/footer.component';
     ItemDescComponent,
     ItemDescHorizontalComponent,
     FooterComponent,
+    ScrollToTopComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

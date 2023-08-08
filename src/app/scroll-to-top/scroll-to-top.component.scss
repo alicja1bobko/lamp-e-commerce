@@ -1,0 +1,27 @@
+.scroll-to-top-container {
+  display: flex;
+  justify-content: flex-end; /* Align the arrow to the right */
+  margin-bottom: 3rem;
+}
+
+.scroll-to-top {
+  cursor: pointer;
+  //   background-color: #333;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+  align-items: end;
+}
+
+.scroll-to-top:hover {
+  opacity: 1;
+  background-color: #f3b67e;
+  border: 1px solid #f3b67e;
+}

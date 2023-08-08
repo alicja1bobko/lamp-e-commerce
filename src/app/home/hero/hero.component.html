@@ -1,5 +1,39 @@
-<div class="hero-container">
+<div class="hero-container bg">
+  <div class="lamp1 bg" [class.invisible]="isLamp1Visible"></div>
+  <div class="lamp2 bg" [class.invisible]="isLamp2Visible"></div>
+
   <div class="hero-content">
     <h1 class="hero-text">designer lamps</h1>
+    <article class="hero--article">
+      <section
+        class="hero-section-first"
+        (mouseenter)="toggleLamp1Visibility()"
+        (mouseleave)="toggleLamp1Visibility()"
+      >
+        <p>Raku SH9</p>
+        <p>Mark Herkner</p>
+        <p class="hero-section--dimensions">8.3in x 16.3in</p>
+        <p>$42.99</p>
+      </section>
+      <section class="hero-section-second">
+        <p>Flowerpot VP9</p>
+        <p>Verner Panton</p>
+        <p class="hero-section--dimensions">6.29in x 11.6in</p>
+        <p>$34.99</p>
+      </section>
+      <section
+        class="hero-section-third"
+        (mouseenter)="toggleLamp2Visibility()"
+        (mouseleave)="toggleLamp2Visibility()"
+      >
+        <p>
+          Our unique portfolio of lighting spans designs from the 1960s to the
+          present day and includes interior objects by famous designers
+        </p>
+        <button class="hero-section--button">
+          <a href="#">go to catalog</a>
+        </button>
+      </section>
+    </article>
   </div>
 </div>

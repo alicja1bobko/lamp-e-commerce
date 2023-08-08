@@ -80,6 +80,14 @@ const sale = [
     image: "https://live.staticflickr.com/65535/53102448255_eca9bef77c_o.jpg",
   },
   {
+    name: "Acorn",
+    manufacturer: "Umage",
+    price: 87,
+    prevPrice: 95,
+    designer: "Jacob Rudbeck",
+    image: "https://live.staticflickr.com/65535/53102758189_8b0577e15a_o.png",
+  },
+  {
     name: "Arrangements",
     manufacturer: "Flos",
     price: 1400,

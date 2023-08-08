@@ -4,18 +4,20 @@
       <div class="item-icon">
         <img [src]="item.image" [alt]="item.name" />
       </div>
-      <div class="item-desc">
-        <div class="item-desc--name">{{ item.name }}</div>
-        <div>
+      <div class="item-details">
+        <div class="item-desc">
+          <div class="item-desc--name">{{ item.name }}</div>
           <div>
-            <span class="item-desc--price">{{ item.price | currency }} </span>
-            <span class="item-desc--prevPrice">
-              {{ item.prevPrice | number }}</span
-            >
+            <div>
+              <span class="item-desc--price">{{ item.price | currency }} </span>
+              <span class="item-desc--prevPrice">
+                {{ item.prevPrice | number }}</span
+              >
+            </div>
           </div>
         </div>
+        <div class="item-desc--designer">{{ item.designer }}</div>
       </div>
-      <div class="item-desc--designer">{{ item.designer }}</div>
     </div>
   </div>
 </ng-template>

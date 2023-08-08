@@ -1,21 +1,33 @@
 .bestsellers-layout {
   display: grid;
+}
+
+@media only screen and (max-width: 1600px) {
+  .bestsellers-layout-firstRow {
+    gap: 4rem 1rem;
+  }
+}
+
+.bestsellers-layout-firstRow {
+  display: grid;
+  gap: 1rem 1rem;
   grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1rem;
+}
+
+.bestsellers-layout-secondRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .bestsellers--article {
-  max-width: 300px;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  text-align: left;
   font-size: 14px;
   line-height: 22px;
-  margin-top: auto;
-
-  margin-bottom: 30px;
+  height: 100%; /* Ensure the element takes up the available height */
 }
 
 .bestsellers--name {

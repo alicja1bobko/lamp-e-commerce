@@ -1,0 +1,6 @@
+.sale-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 1rem; /* Gap between grid items */
+}

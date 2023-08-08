@@ -16,6 +16,7 @@ import { SaleComponent } from './home/sale/sale.component';
 import { BestDesignerComponent } from './home/best-designer/best-designer.component';
 import { ItemDescComponent } from './home/item-desc/item-desc.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ItemDescHorizontalComponent } from './home/item-desc-horizontal/item-desc-horizontal.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     SaleComponent,
     BestDesignerComponent,
     ItemDescComponent,
+    ItemDescHorizontalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

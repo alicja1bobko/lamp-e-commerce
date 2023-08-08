@@ -1,24 +1,13 @@
-:host {
-  display: flex;
-  justify-content: space-between;
-}
 .product {
   display: flex;
-  justify-content: space-between;
-  // border: 1px solid #ccc;
-  // padding: 10px;
+  flex-direction: column;
+  justify-content: center;
 }
 .product-details {
-  // display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  max-width: 450px;
-}
-
-.item-details {
   display: flex;
   flex-direction: column;
-  margin-top: auto;
+  max-width: 100%;
+  max-width: 800px;
 }
 
 .item-icon img {
@@ -30,8 +19,6 @@
 .item-desc {
   display: flex;
   justify-content: space-between;
-
-  margin-top: auto;
 }
 
 .item-desc--name {

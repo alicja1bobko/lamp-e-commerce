@@ -31,3 +31,34 @@ nav ul {
   text-align: center;
   font-size: large;
 }
+
+@media screen and (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+
+  nav ul {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .name {
+    font-size: medium;
+  }
+}
+
+/* Media Query for Mobile Phones */
+@media screen and (max-width: 480px) {
+  nav {
+    padding: 0.5rem;
+  }
+
+  nav ul {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .name {
+    font-size: small;
+  }
+}

@@ -58,3 +58,27 @@
 .fourth-item {
   max-width: 600px;
 }
+
+@media screen and (max-width: 1500px) {
+}
+
+@media screen and (max-width: 768px) {
+  .bestsellers-layout {
+  }
+
+  .bestsellers-layout-firstRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .bestsellers-layout-secondRow {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .bestsellers--article {
+    margin-top: 1rem;
+  }
+}

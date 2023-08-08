@@ -5,7 +5,7 @@
 }
 
 .container {
-  padding: 6rem 10rem;
+  padding: 6rem 18rem;
 }
 
 .footer-content {
@@ -55,4 +55,28 @@
   line-height: 2.5rem;
   height: 100%;
   color: #b7b4a3;
+}
+
+@media screen and (max-width: 1500px) {
+  .container {
+    padding: 6rem 10rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 3rem;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .container {
+    padding: 3rem 5rem;
+  }
 }

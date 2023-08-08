@@ -44,10 +44,10 @@
 
 .hero-text {
   position: absolute;
-  top: 17%;
-  left: 14%;
+  top: 12%;
+  left: 20%;
   color: #fd951c;
-  font-size: 8em;
+  font-size: 9em;
   z-index: 100;
 }
 
@@ -57,7 +57,7 @@
 
 .hero-section-first {
   position: absolute;
-  left: 26%;
+  left: 27%;
   top: 55%;
   z-index: 100;
 }
@@ -68,7 +68,7 @@
 
 .hero-section-second {
   position: absolute;
-  left: 43%;
+  left: 44%;
   top: 62%;
 }
 
@@ -76,9 +76,9 @@
   color: white;
   font-weight: 300;
   line-height: 1.5em;
-  max-width: 20em;
+  max-width: 22em;
   position: absolute;
-  right: 19%;
+  right: 21%;
   top: 54%;
   z-index: 100;
 }
@@ -112,4 +112,40 @@
 .hero-section--button > a:hover {
   background-color: #fd951c;
   color: white;
+}
+
+@media screen and (max-width: 1500px) {
+  .hero-text {
+    top: 15%;
+    left: 17%;
+    font-size: 8em;
+  }
+  .hero-section-first {
+    left: 26%;
+    top: 55%;
+    z-index: 100;
+  }
+  .hero-section-third {
+    right: 19%;
+    top: 54%;
+    max-width: 19em;
+  }
+  .hero-section-second {
+    left: 43%;
+    top: 62%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-text {
+    top: 50%;
+    left: 10%;
+    font-size: 4em;
+  }
+
+  .hero-section-first,
+  .hero-section-second,
+  .hero-section-third {
+    display: none;
+  }
 }

@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 export class HeroComponent {
   isLamp1Visible = true;
   isLamp2Visible = true;
-  isSectionFirstHovered = false;
-  isSectionThirdHovered = false;
 
   toggleLamp1Visibility() {
     this.isLamp1Visible = !this.isLamp1Visible;

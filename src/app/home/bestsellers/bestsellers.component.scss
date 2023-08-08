@@ -1,0 +1,48 @@
+.bestsellers-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.bestsellers--article {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: auto;
+
+  margin-bottom: 30px;
+}
+
+.bestsellers--name {
+  color: #ec9747;
+  font-weight: 700;
+}
+
+.bestsellers--button {
+  margin-top: 20px;
+  background-color: white;
+  padding: 15px;
+  width: 180px;
+  border: 1px solid black;
+  transition: background-color 0.3s ease;
+}
+
+.bestsellers--button:hover {
+  background-color: #f3b67e;
+}
+
+.bestsellers--button > a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.fourth-item {
+  max-width: 600px;
+}

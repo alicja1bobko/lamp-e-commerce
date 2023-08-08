@@ -1,3 +1,28 @@
 <section class="home-section">
-  <h2>bestsellers by Space Copenhagen</h2>
+  <h2 class="home-section--header">bestsellers by Space Copenhagen</h2>
+  <ul class="bestsellers-layout">
+    <app-item-desc
+      *ngFor="let bestseller of bestsellers.slice(0, 3)"
+      [item]="bestseller"
+    />
+
+    <article class="bestsellers--article">
+      <p>
+        <span class="bestsellers--name">Space Copenhagen</span> established in
+        2005 by Peter Bundgaard Rutzou is an interior design studio and design
+        studio working across multiple disciplines from furniture, lighting and
+        refined objects, to art direction, interior design for private homes,
+        hotels and restaurants all over the world.
+      </p>
+      <button class="bestsellers--button">
+        <a routerLink="/contacts">View more</a>
+      </button>
+    </article>
+
+    <app-item-desc
+      *ngFor="let bestseller of bestsellers.slice(3, 4)"
+      [item]="bestseller"
+      class="fourth-item"
+    />
+  </ul>
 </section>

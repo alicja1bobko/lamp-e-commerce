@@ -15,6 +15,7 @@ import { BestsellersComponent } from './home/bestsellers/bestsellers.component';
 import { SaleComponent } from './home/sale/sale.component';
 import { BestDesignerComponent } from './home/best-designer/best-designer.component';
 import { ItemDescComponent } from './home/item-desc/item-desc.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,13 +31,10 @@ import { ItemDescComponent } from './home/item-desc/item-desc.component';
     BestsellersComponent,
     SaleComponent,
     BestDesignerComponent,
-    ItemDescComponent
+    ItemDescComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

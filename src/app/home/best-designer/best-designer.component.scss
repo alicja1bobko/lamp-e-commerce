@@ -1,0 +1,29 @@
+.designer-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7rem;
+}
+
+.designer--section {
+  display: flex;
+  flex-direction: column;
+  //   justify-content: space-between;
+}
+
+.designer--section img {
+  margin-bottom: 9px;
+  max-width: 100%;
+  height: auto;
+}
+
+.designer--header {
+  color: #ec9747;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.designer--paragraph {
+  font-size: 14px;
+  line-height: 22px;
+  word-wrap: break-word;
+}

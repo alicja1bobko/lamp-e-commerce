@@ -37,6 +37,7 @@ import { SubtotalPriceComponent } from './cart/subtotal-price/subtotal-price.com
 import { FormComponent } from './cart/form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TotalPriceComponent } from './cart/total-price/total-price.component';
+import { FooterSmallComponent } from './footer-small/footer-small.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,6 +71,7 @@ import { TotalPriceComponent } from './cart/total-price/total-price.component';
     SubtotalPriceComponent,
     FormComponent,
     TotalPriceComponent,
+    FooterSmallComponent,
   ],
   imports: [
     BrowserModule,

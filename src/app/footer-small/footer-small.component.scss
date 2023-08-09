@@ -1,0 +1,33 @@
+.footer {
+  background-color: #0e0e0e;
+  color: #fff;
+  margin-top: 4rem;
+}
+
+.container {
+  padding: 5rem 18rem;
+}
+
+.footer-text {
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: left;
+  font-size: 14px;
+  line-height: 2.5rem;
+  height: 100%;
+  color: #b7b4a3;
+}
+
+@media screen and (max-width: 1500px) {
+  .container {
+    padding: 3rem 10rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 3rem 5rem;
+  }
+}

@@ -1,8 +1,60 @@
 <app-navbar-light />
-<div *ngIf="selectedItem">
-  <h2>{{ selectedItem.name }}</h2>
-  <button class="remove-btn" (click)="decrementQuantity()">-</button>
-  <p class="quantity-text center">{{ quantity }}</p>
-  <button class="add-btn" (click)="incrementQuantity()">+</button>
-  <button class="add-to-cart-btn" (click)="addToCart()">Add to cart</button>
+<div class="details-container">
+  <article *ngIf="selectedItem" class="details-article">
+    <img [src]="selectedItem.image" [alt]="selectedItem.name" class="image" />
+    <div class="details-product-container">
+      <h1 class="product-name">{{ selectedItem.name }}</h1>
+      <div>
+        <span class="item-desc--price"
+          >{{ selectedItem.price | currency }}
+        </span>
+        <span class="item-desc--prevPrice">
+          {{ selectedItem.prevPrice | number }}</span
+        >
+      </div>
+      <div class="btns-container">
+        <button class="remove-btn" (click)="decrementQuantity()">
+          <span class="material-symbols-outlined"> remove </span>
+        </button>
+        <p class="quantity-text center">{{ quantity }}</p>
+        <button class="add-btn" (click)="incrementQuantity()">
+          <span class="material-symbols-outlined"> add </span>
+        </button>
+        <button class="add-to-cart-btn" (click)="addToCart()">
+          Add to cart
+        </button>
+      </div>
+
+      <div class="details-info-container">
+        <p class="details-info--section-title">details info</p>
+        <section class="details-info--section">
+          <p class="details-info--section-title">Category</p>
+          <p class="details-info--section-text">{{ selectedItem.category }}</p>
+        </section>
+        <section class="details-info--section">
+          <p class="details-info--section-title">Dimensions</p>
+          <p class="details-info--section-text">
+            {{ selectedItem.dimensions }}
+          </p>
+        </section>
+        <section class="details-info--section">
+          <p class="details-info--section-title">Light source</p>
+          <p class="details-info--section-text">
+            Colour temperature [Kelvin]: {{ selectedItem.colourTemperature }}
+          </p>
+          <p class="details-info--section-text">
+            Light output: {{ selectedItem.lightOutput }}
+          </p>
+          <p class="details-info--section-text">CRI: {{ selectedItem.CRI }}</p>
+          <p class="details-info--section-text">
+            Life time: {{ selectedItem.lifeTime | number }} hours
+          </p>
+          <p class="details-info--section-text">
+            Voltage: {{ selectedItem.voltage }}
+          </p>
+        </section>
+      </div>
+    </div>
+  </article>
 </div>
+<app-footer />

@@ -12,14 +12,9 @@
           {{ selectedItem.prevPrice | number }}</span
         >
       </div>
+
       <div class="btns-container">
-        <button class="remove-btn" (click)="decrementQuantity()">
-          <span class="material-symbols-outlined"> remove </span>
-        </button>
-        <p class="quantity-text center">{{ quantity }}</p>
-        <button class="add-btn" (click)="incrementQuantity()">
-          <span class="material-symbols-outlined"> add </span>
-        </button>
+        <app-qty-btns (quantityChange)="onQuantityChange($event)" />
         <button class="add-to-cart-btn" (click)="addToCart()">
           Add to cart
         </button>

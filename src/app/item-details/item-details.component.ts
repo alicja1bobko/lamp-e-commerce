@@ -14,7 +14,11 @@ import { CartService } from '../services/cart.service';
 export class ItemDetailsComponent {
   selectedItem: Item | undefined;
   paramsSub: Subscription | null = null;
-  quantity: number = 1;
+  cartQuantity: number = 1;
+
+  onQuantityChange(quantity: number) {
+    this.cartQuantity = quantity;
+  }
 
   constructor(
     private route: ActivatedRoute,
@@ -38,19 +42,10 @@ export class ItemDetailsComponent {
       this.paramsSub.unsubscribe();
     }
   }
-  decrementQuantity(): void {
-    if (this.quantity >= 2) {
-      this.quantity = this.quantity - 1;
-    }
-  }
-
-  incrementQuantity(): void {
-    this.quantity = this.quantity + 1;
-  }
 
   addToCart(): void {
     if (this.selectedItem) {
-      this.cartService.addToCart(this.selectedItem, this.quantity);
+      this.cartService.addToCart(this.selectedItem, this.cartQuantity);
     }
   }
 }

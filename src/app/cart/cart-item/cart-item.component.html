@@ -1,4 +1,9 @@
 <ng-template [ngIf]="cartItem">
+  <img
+    [src]="cartItem.item.image"
+    [alt]="cartItem.item.name"
+    class="cart-img"
+  />
   <p>{{ cartItem.item.name }}</p>
   <p class="quantity-text center">{{ cartItem.quantity }}</p>
 </ng-template>

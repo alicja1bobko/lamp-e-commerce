@@ -31,6 +31,8 @@ import { FormsModule } from '@angular/forms';
 import { BatteryComponent } from './shop/filters/battery/battery.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
+import { CartHeaderComponent } from './cart/cart-header/cart-header.component';
+import { QtyBtnsComponent } from './qty-btns/qty-btns.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +62,8 @@ import { CartItemComponent } from './cart/cart-item/cart-item.component';
     BatteryComponent,
     ItemDetailsComponent,
     CartItemComponent,
+    CartHeaderComponent,
+    QtyBtnsComponent,
   ],
   imports: [
     BrowserModule,

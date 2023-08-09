@@ -33,6 +33,15 @@ export class CartService {
     return this.cartItems$;
   }
 
+  getItemQuantity(id: string): number {
+    let currentCartItems = this.cartItems$.value;
+    const item = Array.from(currentCartItems.keys()).find(
+      (cartItem) => cartItem.id === id
+    )!;
+    const currentQuantity = currentCartItems.get(item)!;
+    return currentQuantity;
+  }
+
   incrementQuantity(item: Item): void {
     let currentCartItems = this.cartItems$.value;
     const currentQuantity = currentCartItems.get(item)!;

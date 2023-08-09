@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { EventEmitter, Output } from '@angular/core';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-qty-btns',
@@ -7,7 +8,7 @@ import { EventEmitter, Output } from '@angular/core';
   styleUrls: ['./qty-btns.component.scss'],
 })
 export class QtyBtnsComponent {
-  quantity: number = 1;
+  @Input() quantity: number = 1;
   @Output() quantityChange = new EventEmitter<number>();
 
   decrementQuantity(): void {

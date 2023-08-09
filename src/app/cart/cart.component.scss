@@ -2,7 +2,27 @@
   padding: 2rem 10rem;
 }
 .cart-layout {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
+}
+
+.cart--item-list {
+  border-bottom: 2px solid #dddad1;
+  max-width: 500px;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+.cart--item-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.cart--item-list::-webkit-scrollbar-track {
+  background-color: #dad8cc;
+}
+
+.cart--item-list::-webkit-scrollbar-thumb {
+  background-color: #686868;
+  border-radius: 5px;
 }

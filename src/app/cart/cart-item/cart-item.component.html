@@ -1,9 +1,20 @@
 <ng-template [ngIf]="cartItem">
-  <img
-    [src]="cartItem.item.image"
-    [alt]="cartItem.item.name"
-    class="cart-img"
-  />
-  <p>{{ cartItem.item.name }}</p>
-  <p class="quantity-text center">{{ cartItem.quantity }}</p>
+  <div class="cart-item-layout">
+    <img
+      [src]="cartItem.item.image"
+      [alt]="cartItem.item.name"
+      class="cart-img"
+    />
+    <div class="cart-desc">
+      <div class="item-info">
+        <p class="item-name">{{ cartItem.item.name }}</p>
+        <p>{{ cartItem.item.designer }}</p>
+        <p class="item-price">{{ cartItem.item.price | currency }}</p>
+      </div>
+      <app-qty-btns
+        [quantity]="cartItem.quantity"
+        (quantityChange)="onQuantityChange($event)"
+      />
+    </div>
+  </div>
 </ng-template>

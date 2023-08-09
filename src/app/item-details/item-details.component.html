@@ -14,7 +14,10 @@
       </div>
 
       <div class="btns-container">
-        <app-qty-btns (quantityChange)="onQuantityChange($event)" />
+        <app-qty-btns
+          [quantity]="1"
+          (quantityChange)="onQuantityChange($event)"
+        />
         <button class="add-to-cart-btn" (click)="addToCart()">
           Add to cart
         </button>

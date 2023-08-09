@@ -1,3 +1,36 @@
+.cart-item-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
 .cart-img {
-  max-width: 200px;
+  max-width: 220px;
+}
+
+.cart-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-info > p {
+  padding-bottom: 8px;
+}
+
+.item-name {
+  font-weight: 600;
+}
+
+.item-price {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 1500px) {
+  .cart-img {
+    max-width: 150px;
+  }
 }

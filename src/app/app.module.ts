@@ -33,6 +33,8 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { CartItemComponent } from './cart/cart-item/cart-item.component';
 import { CartHeaderComponent } from './cart/cart-header/cart-header.component';
 import { QtyBtnsComponent } from './qty-btns/qty-btns.component';
+import { SubtotalPriceComponent } from './cart/subtotal-price/subtotal-price.component';
+import { FormComponent } from './cart/form/form.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { QtyBtnsComponent } from './qty-btns/qty-btns.component';
     CartItemComponent,
     CartHeaderComponent,
     QtyBtnsComponent,
+    SubtotalPriceComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

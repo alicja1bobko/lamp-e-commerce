@@ -1,0 +1,11 @@
+<div class="product-type-container">
+  <p class="product-type-header">product type</p>
+  <label *ngFor="let option of options" class="checkbox-label">
+    <input
+      type="checkbox"
+      [(ngModel)]="option.selected"
+      (change)="checkboxChanged()"
+    />
+    {{ option.label }}
+  </label>
+</div>

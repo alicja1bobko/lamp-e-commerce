@@ -15,4 +15,8 @@ export class ApiService {
   getSale() {
     return this.http.get<Item[]>('http://localhost:3000/api/sale');
   }
+
+  getProducts() {
+    return this.http.get<Item[]>('http://localhost:3000/api/products');
+  }
 }

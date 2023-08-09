@@ -21,6 +21,14 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { NavbarLightComponent } from './navbar-light/navbar-light.component';
 import { HeaderComponent } from './shop/header/header.component';
 import { ChangeDisplayComponent } from './shop/change-display/change-display.component';
+import { FiltersComponent } from './shop/filters/filters.component';
+import { ProductsComponent } from './shop/products/products.component';
+import { PriceSliderComponent } from './shop/filters/price-slider/price-slider.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProductTypeComponent } from './shop/filters/product-type/product-type.component';
+import { FormsModule } from '@angular/forms';
+import { BatteryComponent } from './shop/filters/battery/battery.component';
 
 @NgModule({
   declarations: [
@@ -43,8 +51,20 @@ import { ChangeDisplayComponent } from './shop/change-display/change-display.com
     NavbarLightComponent,
     HeaderComponent,
     ChangeDisplayComponent,
+    FiltersComponent,
+    ProductsComponent,
+    PriceSliderComponent,
+    ProductTypeComponent,
+    BatteryComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MatSliderModule,
+    BrowserAnimationsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

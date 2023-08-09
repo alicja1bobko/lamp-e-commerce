@@ -1,0 +1,23 @@
+.price-slider-contaner {
+  padding: 1rem 0;
+  border-bottom: 2px solid #dddad1;
+}
+.price-header {
+  font-weight: 500;
+}
+.my-slider {
+  --mdc-slider-handle-color: #e67606;
+  --mdc-slider-handle-color-active: #e67606;
+  --mdc-slider-active-track-color: #e67606;
+  --mdc-slider-active-track-color: #e28e3a;
+  --mdc-slider-inactive-track-color: #dddad1;
+
+  --mdc-slider-handle-height: 15px;
+  --mdc-slider-handle-width: 15px;
+  --mdc-slider-inactive-track-shape: 20px;
+  width: 90%;
+}
+
+.my-slider ::ng-deep .mat-slider-thumb::part(handle):active {
+  background-color: #e67606;
+}

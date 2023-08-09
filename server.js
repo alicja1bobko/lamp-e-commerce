@@ -122,6 +122,10 @@ app.get("/api/sale", (req, res) => {
   res.json(sale);
 });
 
+app.get("/api/products", (req, res) => {
+  res.json(sale);
+});
+
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
 });

@@ -1,0 +1,33 @@
+<div class="radio-container">
+  <p class="battery-header">battery</p>
+  <label>
+    <input
+      type="radio"
+      name="batteryOption"
+      value="all"
+      [(ngModel)]="selectedOption"
+      (change)="handleOptionChange('all')"
+    />
+    all
+  </label>
+  <label>
+    <input
+      type="radio"
+      name="batteryOption"
+      value="rechargeable"
+      [(ngModel)]="selectedOption"
+      (change)="handleOptionChange('rechargeable')"
+    />
+    rechargeable
+  </label>
+  <label>
+    <input
+      type="radio"
+      name="batteryOption"
+      value="replaceable"
+      [(ngModel)]="selectedOption"
+      (change)="handleOptionChange('replaceable')"
+    />
+    replaceable
+  </label>
+</div>

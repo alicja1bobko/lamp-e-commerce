@@ -2,7 +2,9 @@
   <div class="product">
     <div class="product-details">
       <div class="item-icon">
-        <img [src]="item.image" [alt]="item.name" />
+        <a routerLink="/item/{{ item.id }}">
+          <img [src]="item.image" [alt]="item.name" />
+        </a>
       </div>
       <div class="item-desc">
         <div class="item-desc--name">{{ item.name }}</div>

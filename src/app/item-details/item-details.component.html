@@ -1,6 +1,8 @@
+<app-navbar-light />
 <div *ngIf="selectedItem">
   <h2>{{ selectedItem.name }}</h2>
-  <!-- <img [src]="selectedItem.image" alt="Product Image" />
-  <p>Price: {{ selectedItem.price }}</p> -->
-  <!-- Other product details -->
+  <button class="remove-btn" (click)="decrementQuantity()">-</button>
+  <p class="quantity-text center">{{ quantity }}</p>
+  <button class="add-btn" (click)="incrementQuantity()">+</button>
+  <button class="add-to-cart-btn" (click)="addToCart()">Add to cart</button>
 </div>

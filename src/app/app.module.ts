@@ -30,6 +30,7 @@ import { ProductTypeComponent } from './shop/filters/product-type/product-type.c
 import { FormsModule } from '@angular/forms';
 import { BatteryComponent } from './shop/filters/battery/battery.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { CartItemComponent } from './cart/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     ProductTypeComponent,
     BatteryComponent,
     ItemDetailsComponent,
+    CartItemComponent,
   ],
   imports: [
     BrowserModule,

@@ -19,7 +19,7 @@ const bestsellers = [
     prevPrice: 28800,
     designer: "Lindsay Adelman",
     image: "https://live.staticflickr.com/65535/53101113527_7b1e277e0f_o.jpg",
-    id: "1",
+    id: "01",
   },
   {
     name: "Arrangements",
@@ -51,6 +51,15 @@ const bestsellers = [
 ];
 
 const sale = [
+  {
+    name: "Branching Bubbles",
+    manufacturer: "Lindsey Adelman Studio",
+    price: 25200,
+    prevPrice: 28800,
+    designer: "Lindsay Adelman",
+    image: "https://live.staticflickr.com/65535/53101113527_7b1e277e0f_o.jpg",
+    id: "01",
+  },
   {
     name: "Como",
     manufacturer: "&Tradition",

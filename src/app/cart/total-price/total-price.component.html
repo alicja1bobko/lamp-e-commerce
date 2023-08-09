@@ -1,0 +1,19 @@
+<p class="total-price">total price</p>
+<div class="receipt">
+  <div class="flex">
+    <p class="subtotal">Subtotal price</p>
+    <span class="total-number">{{ subtotal$ | currency }}</span>
+  </div>
+  <div class="flex">
+    <p class="subtotal">Comission</p>
+    <span class="total-number">Free</span>
+  </div>
+  <div class="flex">
+    <p class="subtotal">Shipping cost</p>
+    <span class="total-number">$20</span>
+  </div>
+</div>
+<div class="flex">
+  <p class="subtotal">Total price</p>
+  <span class="total-number">{{ total$ | currency }}</span>
+</div>

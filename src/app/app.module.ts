@@ -35,7 +35,8 @@ import { CartHeaderComponent } from './cart/cart-header/cart-header.component';
 import { QtyBtnsComponent } from './qty-btns/qty-btns.component';
 import { SubtotalPriceComponent } from './cart/subtotal-price/subtotal-price.component';
 import { FormComponent } from './cart/form/form.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { TotalPriceComponent } from './cart/total-price/total-price.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +69,7 @@ import { FormComponent } from './cart/form/form.component';
     QtyBtnsComponent,
     SubtotalPriceComponent,
     FormComponent,
+    TotalPriceComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +78,7 @@ import { FormComponent } from './cart/form/form.component';
     MatSliderModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

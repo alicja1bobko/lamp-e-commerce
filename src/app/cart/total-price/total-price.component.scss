@@ -1,0 +1,22 @@
+.total-price {
+  margin-top: 3rem;
+  font-weight: 500;
+}
+.receipt {
+  border-bottom: 2px solid #dddad1;
+  padding-bottom: 1rem;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.subtotal {
+  font-weight: 400;
+}
+
+.total-number {
+  font-weight: 500;
+}

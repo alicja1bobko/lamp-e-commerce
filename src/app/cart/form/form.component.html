@@ -1,1 +1,121 @@
-<p>form works!</p>
+<div class="form-container">
+  <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+    <div>
+      <div class="contact">
+        <p>contact information</p>
+        <div class="first-last-name">
+          <div class="form-group">
+            <label for="firstName"></label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              formControlName="firstName"
+              required
+              placeholder="First name*"
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastName"></label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              formControlName="lastName"
+              placeholder="Last name*"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email"></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            formControlName="email"
+            placeholder="Email*"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone"></label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            formControlName="phone"
+            placeholder="Phone*"
+            required
+          />
+        </div>
+      </div>
+      <p>shipping</p>
+      <div class="form-group">
+        <label
+          ><input
+            type="radio"
+            name="shipping"
+            [(ngModel)]="shippingMethod"
+            value="pickup"
+          />
+          Pickup from the pick-up point</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="shipping"
+            [(ngModel)]="shippingMethod"
+            value="inpost"
+          />
+          Inpost</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="shipping"
+            [(ngModel)]="shippingMethod"
+            value="DPD"
+          />
+          DPD</label
+        >
+      </div>
+    </div>
+    <div>
+      <p>payment</p>
+      <div class="form-group">
+        <label
+          ><input
+            type="radio"
+            name="payment"
+            [(ngModel)]="paymentMethod"
+            value="credit card"
+          />
+          Credit Card</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="payment"
+            [(ngModel)]="paymentMethod"
+            value="paypall"
+          />
+          PayPal</label
+        >
+        <label
+          ><input
+            type="radio"
+            name="payment"
+            [(ngModel)]="paymentMethod"
+            value="receipt"
+          />
+          Payment upon receipt</label
+        >
+      </div>
+      <app-total-price />
+      <div class="container">
+        <button type="submit">go to payment</button>
+      </div>
+    </div>
+  </form>
+</div>

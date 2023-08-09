@@ -1,0 +1,15 @@
+.subtotal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 2px solid #dddad1;
+  padding-top: 1rem;
+}
+
+.subtotal {
+  font-weight: 500;
+}
+
+.total-number {
+  font-weight: 700;
+}

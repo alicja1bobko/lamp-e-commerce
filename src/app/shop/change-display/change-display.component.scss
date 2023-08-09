@@ -1,0 +1,48 @@
+.change-display-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #dddad1;
+}
+
+.display-icon {
+  font-size: 25px;
+  color: #dddad1;
+  margin-left: 15px;
+}
+
+.reorder {
+  transform: scale(1.3);
+}
+
+.active {
+  color: #e67606; /* Change color on hover */
+}
+
+.select-box {
+  appearance: none;
+  border: none;
+  padding: 10px 30px 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  background: white url("down-arrow.svg") no-repeat right 12px center; /* Add custom arrow icon */
+  background-size: 20px 20px;
+  cursor: pointer;
+  width: 150px;
+  color: #333;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.select-box:hover {
+  border-color: #aaa;
+}
+
+.select-box:focus {
+  outline: none;
+  border-color: #dddad1;
+}
+.select-box option {
+  font-size: 16px;
+  color: #333;
+}

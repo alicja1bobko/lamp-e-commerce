@@ -18,6 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ItemDescHorizontalComponent } from './home/item-desc-horizontal/item-desc-horizontal.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { NavbarLightComponent } from './navbar-light/navbar-light.component';
+import { HeaderComponent } from './shop/header/header.component';
+import { ChangeDisplayComponent } from './shop/change-display/change-display.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,9 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     ItemDescHorizontalComponent,
     FooterComponent,
     ScrollToTopComponent,
+    NavbarLightComponent,
+    HeaderComponent,
+    ChangeDisplayComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

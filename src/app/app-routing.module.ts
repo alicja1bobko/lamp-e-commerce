@@ -6,6 +6,7 @@ import { DesignersComponent } from './designers/designers.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CartComponent } from './cart/cart.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'designers', component: DesignersComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'item/:id', component: ItemDetailsComponent },
   // { path: '**', component: NotFoundComponent },
 ];
 

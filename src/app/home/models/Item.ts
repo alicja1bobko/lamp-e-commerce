@@ -5,4 +5,5 @@ export interface Item {
   prevPrice: number;
   designer: string;
   image: string;
+  id: string;
 }

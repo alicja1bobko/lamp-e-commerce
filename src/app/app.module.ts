@@ -29,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductTypeComponent } from './shop/filters/product-type/product-type.component';
 import { FormsModule } from '@angular/forms';
 import { BatteryComponent } from './shop/filters/battery/battery.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { BatteryComponent } from './shop/filters/battery/battery.component';
     PriceSliderComponent,
     ProductTypeComponent,
     BatteryComponent,
+    ItemDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -82,12 +82,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 - Home page
 
-<img src='src/assets/hero-page.jpg' width='400px' alt="home page">
+<img src='src/assets/hero-page.jpg' width='800px' alt="home page">
 
 - Shop page
 
-<img src='src/assets/shop-page.jpg' width='400px' alt="Shop page">
+<img src='src/assets/shop-page.jpg' width='800px' alt="Shop page">
 
 - Cart page
 
-<img src='src/assets/cart-page.jpg' width='400px' alt="Cart page">
+<img src='src/assets/cart-page.jpg' width='800px' alt="Cart page">

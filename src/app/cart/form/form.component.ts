@@ -37,6 +37,14 @@ export class FormComponent {
   onShippingMethodChange(event: Event) {
     const selectedShippingMethod = (event.target as HTMLInputElement).value;
     this.shippingMethod = selectedShippingMethod;
-    console.log(this.shippingMethod);
+    if (selectedShippingMethod === 'pickup') {
+      this.contactForm.get('country')?.disable();
+      this.contactForm.get('postalCode')?.disable();
+      this.contactForm.get('street')?.disable();
+    } else {
+      this.contactForm.get('country')?.enable();
+      this.contactForm.get('postalCode')?.enable();
+      this.contactForm.get('street')?.enable();
+    }
   }
 }

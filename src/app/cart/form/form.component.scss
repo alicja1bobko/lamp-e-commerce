@@ -26,6 +26,15 @@ label {
   margin-bottom: 5px;
 }
 
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"] {
@@ -71,4 +80,30 @@ button[type="submit"]:hover {
 .container {
   display: flex;
   justify-content: flex-end;
+}
+
+.shipping {
+  margin-bottom: 1.5rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.gray {
+  color: #c2bdae;
+  font-size: 14px;
+}
+
+.text-danger {
+  color: red;
+  font-size: 14px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }

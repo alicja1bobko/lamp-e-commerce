@@ -5,27 +5,71 @@
         <p>contact information</p>
         <div class="first-last-name">
           <div class="form-group">
-            <label for="firstName"></label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              formControlName="firstName"
-              required
-              placeholder="First name*"
-            />
+            <div class="flex-column">
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                formControlName="firstName"
+                required
+                placeholder="First name*"
+              />
+              <!-- invalid data messages -->
+              <div
+                *ngIf="
+                  contactForm.get('firstName')?.touched &&
+                  contactForm.get('firstName')?.invalid
+                "
+              >
+                <div
+                  *ngIf="contactForm.get('firstName')?.errors?.['required']"
+                  class="text-danger"
+                >
+                  Name is required.
+                </div>
+                <div
+                  *ngIf="contactForm.get('firstName')?.errors?.['minlength'] "
+                  class="text-danger"
+                >
+                  Name is too short.
+                </div>
+              </div>
+            </div>
+            <!-- invalid data messages -->
           </div>
           <div class="form-group">
-            <label for="lastName"></label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              formControlName="lastName"
-              placeholder="Last name*"
-              required
-            />
+            <div class="flex-column">
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                formControlName="lastName"
+                placeholder="Last name*"
+                required
+              />
+            </div>
+            <!-- invalid data messages -->
+            <div
+              *ngIf="
+                contactForm.get('lastName')?.touched &&
+                contactForm.get('lastName')?.invalid
+              "
+            >
+              <div
+                *ngIf="contactForm.get('lastName')?.errors?.['required']"
+                class="text-danger"
+              >
+                Last name is required.
+              </div>
+              <div
+                *ngIf="contactForm.get('lastName')?.errors?.['minlength'] "
+                class="text-danger"
+              >
+                Last name is too short.
+              </div>
+            </div>
           </div>
+          <!-- invalid data messages -->
         </div>
         <div class="form-group">
           <label for="email"></label>
@@ -38,6 +82,29 @@
             required
           />
         </div>
+
+        <!-- invalid data messages -->
+        <div
+          *ngIf="
+            contactForm.get('email')?.touched &&
+            contactForm.get('email')?.invalid
+          "
+        >
+          <div
+            *ngIf="contactForm.get('email')?.errors?.['required']"
+            class="text-danger"
+          >
+            Email is required.
+          </div>
+          <div
+            *ngIf="contactForm.get('email')?.errors?.['email'] "
+            class="text-danger"
+          >
+            Email format is invalid.
+          </div>
+        </div>
+        <!-- invalid data messages -->
+
         <div class="form-group">
           <label for="phone"></label>
           <input
@@ -48,37 +115,166 @@
             placeholder="Phone*"
             required
           />
+          <!-- invalid data messages -->
+          <div
+            *ngIf="
+              contactForm.get('phone')?.touched &&
+              contactForm.get('phone')?.invalid
+            "
+          >
+            <div
+              *ngIf="contactForm.get('phone')?.errors?.['required']"
+              class="text-danger"
+            >
+              Phone number is required.
+            </div>
+            <div
+              *ngIf="contactForm.get('phone')?.errors?.['minlength'] "
+              class="text-danger"
+            >
+              Phone number is too short.
+            </div>
+          </div>
+          <!-- invalid data messages -->
         </div>
       </div>
-      <p>shipping</p>
+      <div class="shipping">
+        <p>shipping</p>
+        <div class="form-group">
+          <div class="flex">
+            <label
+              ><input
+                type="radio"
+                name="shippingMethod"
+                formControlName="shippingMethod"
+                [(ngModel)]="shippingMethod"
+                value="pickup"
+                (change)="onShippingMethodChange($event)"
+              />
+              Pickup from the pick-up point</label
+            >
+
+            <span class="gray">Free</span>
+          </div>
+          <div class="flex">
+            <label
+              ><input
+                type="radio"
+                name="shippingMethod"
+                formControlName="shippingMethod"
+                [(ngModel)]="shippingMethod"
+                value="inpost"
+                (change)="onShippingMethodChange($event)"
+              />
+              Inpost</label
+            >
+            <span class="gray">$20</span>
+          </div>
+          <div class="flex">
+            <label
+              ><input
+                type="radio"
+                name="shippingMethod"
+                formControlName="shippingMethod"
+                [(ngModel)]="shippingMethod"
+                value="DPD"
+                (change)="onShippingMethodChange($event)"
+              />
+              DPD</label
+            >
+            <span class="gray">$24</span>
+          </div>
+        </div>
+      </div>
+      <p>address</p>
       <div class="form-group">
-        <label
-          ><input
-            type="radio"
-            name="shipping"
-            [(ngModel)]="shippingMethod"
-            value="pickup"
-          />
-          Pickup from the pick-up point</label
+        <select id="country" formControlName="country">
+          <option value="" disabled selected>Select country*</option>
+          <option value="us">United States</option>
+          <option value="ca">Canada</option>
+          <option value="uk">United Kingdom</option>
+        </select>
+        <!-- invalid data messages -->
+        <div
+          *ngIf="
+            contactForm.get('country')?.touched &&
+            contactForm.get('country')?.invalid
+          "
         >
-        <label
-          ><input
-            type="radio"
-            name="shipping"
-            [(ngModel)]="shippingMethod"
-            value="inpost"
-          />
-          Inpost</label
+          <div
+            *ngIf="contactForm.get('country')?.errors?.['required']"
+            class="text-danger"
+          >
+            Country is required.
+          </div>
+        </div>
+        <!-- invalid data messages -->
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          id="postalCode"
+          formControlName="postalCode"
+          placeholder="Postal code*"
+        />
+        <!-- invalid data messages -->
+        <div
+          *ngIf="
+            contactForm.get('postalCode')?.touched &&
+            contactForm.get('postalCode')?.invalid
+          "
         >
-        <label
-          ><input
-            type="radio"
-            name="shipping"
-            [(ngModel)]="shippingMethod"
-            value="DPD"
-          />
-          DPD</label
+          <div
+            *ngIf="contactForm.get('postalCode')?.errors?.['required']"
+            class="text-danger"
+          >
+            Postal code is required.
+          </div>
+          <div
+            *ngIf="contactForm.get('postalCode')?.errors?.['minlength'] "
+            class="text-danger"
+          >
+            Postal Code is too short.
+          </div>
+        </div>
+        <!-- invalid data messages -->
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          id="street"
+          formControlName="street"
+          placeholder="Street and house number*"
+        />
+        <!-- invalid data messages -->
+        <div
+          *ngIf="
+            contactForm.get('street')?.touched &&
+            contactForm.get('street')?.invalid
+          "
         >
+          <div
+            *ngIf="contactForm.get('street')?.errors?.['required']"
+            class="text-danger"
+          >
+            Street and house number are required.
+          </div>
+          <div
+            *ngIf="contactForm.get('street')?.errors?.['minlength'] "
+            class="text-danger"
+          >
+            Street name is too short.
+          </div>
+        </div>
+        <!-- invalid data messages -->
+      </div>
+      <div class="form-group">
+        <input
+          type="text"
+          id="note"
+          formControlName="note"
+          placeholder="Note"
+        />
       </div>
     </div>
     <div>
@@ -88,7 +284,7 @@
           ><input
             type="radio"
             name="payment"
-            [(ngModel)]="paymentMethod"
+            formControlName="payment"
             value="credit card"
           />
           Credit Card</label
@@ -97,7 +293,7 @@
           ><input
             type="radio"
             name="payment"
-            [(ngModel)]="paymentMethod"
+            formControlName="payment"
             value="paypall"
           />
           PayPal</label
@@ -106,15 +302,17 @@
           ><input
             type="radio"
             name="payment"
-            [(ngModel)]="paymentMethod"
+            formControlName="payment"
             value="receipt"
           />
           Payment upon receipt</label
         >
       </div>
-      <app-total-price />
+      <app-total-price [shippingMethod]="shippingMethod" />
       <div class="container">
-        <button type="submit">go to payment</button>
+        <button type="submit" [disabled]="contactForm.invalid">
+          go to payment
+        </button>
       </div>
     </div>
   </form>

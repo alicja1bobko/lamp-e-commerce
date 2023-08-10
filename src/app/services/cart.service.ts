@@ -56,4 +56,12 @@ export class CartService {
     else currentCartItems.delete(item);
     this.cartItems$.next(currentCartItems);
   }
+
+  removeItem(item: Item): void {
+    let currentCartItems = this.cartItems$.value;
+    if (currentCartItems.has(item)) {
+      currentCartItems.delete(item);
+    }
+    this.cartItems$.next(currentCartItems);
+  }
 }

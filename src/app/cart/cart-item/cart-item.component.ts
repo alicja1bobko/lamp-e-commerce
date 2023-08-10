@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectorRef } from '@angular/core';
 import { Item } from 'src/app/home/models/Item';
 import { CartItem } from '../cart.component';
 import { CartService } from 'src/app/services/cart.service';
@@ -20,10 +20,13 @@ export class CartItemComponent implements OnInit {
   }
 
   onQuantityChange(quantity: number) {
-    console.log(this.cartQuantity, quantity);
     const diff = this.cartQuantity - quantity;
     if (diff == 1) this.cartService.decrementQuantity(this.cartItem.item);
     if (diff == -1) this.cartService.incrementQuantity(this.cartItem.item);
     this.cartQuantity = quantity;
+  }
+  removeItem(item: Item): void {
+    this.cartQuantity = 0;
+    this.cartService.removeItem(item);
   }
 }

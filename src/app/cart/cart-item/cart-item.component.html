@@ -1,20 +1,25 @@
-<ng-template [ngIf]="cartItem">
-  <div class="cart-item-layout">
-    <img
-      [src]="cartItem.item.image"
-      [alt]="cartItem.item.name"
-      class="cart-img"
-    />
-    <div class="cart-desc">
-      <div class="item-info">
-        <p class="item-name">{{ cartItem.item.name }}</p>
-        <p>{{ cartItem.item.designer }}</p>
-        <p class="item-price">{{ cartItem.item.price | currency }}</p>
-      </div>
-      <app-qty-btns
-        [quantity]="cartItem.quantity"
-        (quantityChange)="onQuantityChange($event)"
+<div class="cart-items-container">
+  <ng-template [ngIf]="cartItem">
+    <div class="cart-item-layout">
+      <img
+        [src]="cartItem.item.image"
+        [alt]="cartItem.item.name"
+        class="cart-img"
       />
+      <div class="cart-desc">
+        <div class="item-info">
+          <p class="item-name">{{ cartItem.item.name }}</p>
+          <p>{{ cartItem.item.designer }}</p>
+          <p class="item-price">{{ cartItem.item.price | currency }}</p>
+        </div>
+        <app-qty-btns
+          [quantity]="cartItem.quantity"
+          (quantityChange)="onQuantityChange($event)"
+        />
+      </div>
+      <button class="remove-btn" (click)="removeItem(cartItem.item)">
+        <span class="material-symbols-outlined"> close </span>
+      </button>
     </div>
-  </div>
-</ng-template>
+  </ng-template>
+</div>

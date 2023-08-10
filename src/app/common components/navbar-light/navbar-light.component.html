@@ -5,6 +5,10 @@
     <li class="nav--link left"><a routerLink="/contacts">contacts</a></li>
     <li class="name"><a routerLink="/home">mommolights</a></li>
     <li></li>
-    <li class="nav--link cart right"><a routerLink="/cart">cart</a></li>
+    <li class="nav--link cart right">
+      <a routerLink="/cart"
+        >cart <span class="cart-quantity"> ({{ total$ }})</span></a
+      >
+    </li>
   </ul>
 </nav>

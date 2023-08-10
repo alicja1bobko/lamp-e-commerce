@@ -6,9 +6,9 @@
 }
 .cart-item-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr 10px;
+  grid-template-columns: 1fr 1fr 15px;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   grid-template-rows: auto;
   align-items: flex-start;
 }
@@ -39,6 +39,8 @@
 
 .material-symbols-outlined {
   color: #dddad1;
+  margin-right: 5px;
+  transition: color 0.3s, color 0.3s;
 }
 
 .remove-btn {
@@ -49,8 +51,11 @@
   cursor: pointer;
   font-size: 20px;
   line-height: 1;
-
   place-self: start;
+}
+
+.material-symbols-outlined:hover {
+  color: #b6b3ac;
 }
 
 @media screen and (max-width: 1500px) {

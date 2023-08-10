@@ -91,13 +91,15 @@
 }
 
 .hero-section--button {
-  margin-top: 0.8rem;
+  margin-top: 0.6rem;
   padding: 12px 25px;
   cursor: pointer;
   background-color: #f0f0f0; /* Background color */
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s; /* Transition for smooth effect */
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .hero-section--button > a {
@@ -126,7 +128,7 @@
     z-index: 100;
   }
   .hero-section-third {
-    right: 19%;
+    right: 20%;
     top: 54%;
     max-width: 19em;
   }

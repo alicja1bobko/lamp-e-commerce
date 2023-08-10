@@ -27,6 +27,7 @@ export class ItemDetailsComponent {
   ) {}
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.paramsSub = this.route.params.subscribe((params) => {
       const id = params['id'];
       if (id) {
